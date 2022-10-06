@@ -7,7 +7,9 @@
 <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="all">
-
+<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase.js"></script>
+<script src="js/config.js"></script>
+<script src="js/addproduct.js"></script>
 <style>
     
     @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
@@ -238,35 +240,35 @@
         <div class="user">
             
             <i class="fas fa-chair"></i>
-            <input type="text" name="name" id="name" placeholder="Furniture Name" />
+            <input type="text" name="name" id="furnname" placeholder="Furniture Name" />
             <br />
             <i class="fas fa-credit-card"></i>
-            <input type="text" name="username" id="username" placeholder="Prize" />
+            <input type="text" name="username" id="furnprice" placeholder="Price" />
             <br />
             <i class="fas fa-text-width"></i>
-            <input type="text" name="" id="" placeholder="Description" />
+            <input type="text" name="" id="furndes" placeholder="Description" />
             <br />
 
             <i class="fas fa-sort"></i>
             <lable style="margin-left: 20px;"> Furniture Category : </lable>
-            <select name="cars" id="cars">
+            <select name="products" id="products">
                 <option value="">Choose Category</option>
-                <option value="">Chair</option>
-                <option value="">Lamp</option>
-                <option value="">Bed</option>
+                <option value="Chairs">Chair</option>
+                <option value="Beds">Bed</option>
+                <option value="Accessories">Other Accessories</option>
             </select><br /><br />
 
             <lable>Furniture Image</lable><br /><br />
             <i class="fas fa-image"></i>
-            <input type="file" name="" id="" placeholder="Image" />
+            <input type="file" name="" id="furnimg" placeholder="Image" />
 
             <lable>Furniture 3D Object</lable><br /><br />
             <i class="fas fa-chair"></i>
-            <input type="file" name="" id="" placeholder="3D Object" />
+            <input type="file" name="" id="furnar" placeholder="3D Object" />
        
         </div>
         <div class="login-btn">
-            <button class="btn">Submit</button>
+            <button class="btn" onclick="addprod()" id="SubmitButton">Submit</button>
            
         </div>
     
