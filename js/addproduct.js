@@ -67,10 +67,10 @@ function addprod(){
                             SubmitButton.innerHTML = "Upload Successful";
                             // Handle successful uploads on complete
                             furnarref.snapshot.ref.getDownloadURL().then(function(downloadURLar) {
-                                console.log('File available at', downloadURL);
+                                console.log('File available at', downloadURLar);
                                 docRef.set({
                                     name: furnname,
-                                    price: furnpriceint,
+                                    price: furnprice,
                                     img_url: downloadURL,
                                     description: furdes,
                                     name2: downloadURLar,
@@ -91,4 +91,18 @@ function addprod(){
         }
         );
     }
+}
+
+function showmodel(){
+//     // Get full path of the model
+//     var ar = document.getElementById("furnar");
+//     var modelviewer = document.getElementById("model");
+//     // get file path of the model
+    
+//     var name=ar.files[0].name;
+//     var fullPath=name;
+//     // alert(modelpath);
+//     console.log(fullPath);
+
+//     model.setAttribute("src",fullPath);
 }
