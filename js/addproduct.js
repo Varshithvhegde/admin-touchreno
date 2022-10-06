@@ -8,8 +8,8 @@ function addprod(){
     var furncategory = document.getElementById("products").value;
     var furnar = document.getElementById("furnar");
     var SubmitButton = document.getElementById("SubmitButton");
-    // Add price to database as integer value
-    var furnpriceint = parseInt(furnprice);
+    // Add price to database as iString to avoid errors
+    var price = furnprice.toString();
 
     if(furnname == "" || furnprice == "" || furdes == "" || furncategory == "" || furnar == "" || furnimage.files.length == 0 || furnar.files.length == 0){
         alert("Please fill all the fields");
@@ -70,7 +70,7 @@ function addprod(){
                                 console.log('File available at', downloadURLar);
                                 docRef.set({
                                     name: furnname,
-                                    price: furnprice,
+                                    price: price,
                                     img_url: downloadURL,
                                     description: furdes,
                                     name2: downloadURLar,
